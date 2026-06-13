@@ -31,7 +31,7 @@ export default function HeroTile() {
           Welcome back, {userName}
         </h1>
         <p className="text-zinc-400 text-sm max-w-md">
-          You are maintaining a perfect week. Finish today's session to secure your streak!
+          You are maintaining a perfect week. Finish today&apos;s session to secure your streak!
         </p>
       </div>
 

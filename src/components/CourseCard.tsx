@@ -13,7 +13,7 @@ export default function CourseCard({ course }: CourseCardProps) {
   // Dynamically map icon name to Lucide React component
   const getIcon = (name: string) => {
     // Resolve Lucide icons by name
-    const IconComponent = (Icons as any)[name];
+    const IconComponent = (Icons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[name];
     if (IconComponent) {
       return <IconComponent className="h-6 w-6" />;
     }

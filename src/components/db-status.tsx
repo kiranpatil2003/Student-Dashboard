@@ -1,5 +1,4 @@
-import React from 'react';
-import { Database, Link2, WifiOff } from 'lucide-react';
+import { Database, WifiOff } from 'lucide-react';
 
 interface DbStatusProps {
   isMock: boolean;

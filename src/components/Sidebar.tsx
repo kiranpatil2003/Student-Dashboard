@@ -7,7 +7,6 @@ import {
   BookOpen,
   BarChart3,
   Settings,
-  Menu,
   ChevronLeft,
   ChevronRight,
   GraduationCap

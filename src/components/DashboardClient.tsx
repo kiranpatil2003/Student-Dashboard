@@ -8,7 +8,7 @@ import CourseCard from '@/components/CourseCard';
 import ActivityTile from '@/components/ActivityTile';
 import DbStatus from '@/components/db-status';
 import { Course } from '@/app/actions/courses';
-import { BookOpen, BarChart3, Settings, ShieldAlert, Award, Clock, Flame } from 'lucide-react';
+import { BookOpen, ShieldAlert, Award, Clock, Flame } from 'lucide-react';
 
 interface DashboardClientProps {
   initialCourses: Course[];
@@ -22,7 +22,7 @@ export default function DashboardClient({
   error,
 }: DashboardClientProps) {
   const [activeTab, setActiveTab] = useState('dashboard');
-  const [courses, setCourses] = useState<Course[]>(initialCourses);
+  const [courses] = useState<Course[]>(initialCourses);
 
   // Return readable page title based on active tab
   const getPageTitle = () => {
@@ -85,7 +85,7 @@ export default function DashboardClient({
                     <div>
                       <h4 className="text-white font-semibold">No courses available</h4>
                       <p className="text-zinc-500 text-xs mt-1">
-                        Ensure your Supabase project contains the 'courses' table with active entries.
+                        Ensure your Supabase project contains the &apos;courses&apos; table with active entries.
                       </p>
                     </div>
                   </div>

@@ -53,12 +53,13 @@ export async function fetchCourses(): Promise<FetchCoursesResponse> {
       isMock: false,
       error: null,
     };
-  } catch (err: any) {
+  } catch (err) {
     console.error('Failed to fetch from Supabase:', err);
+    const errorMessage = err instanceof Error ? err.message : String(err);
     return {
       courses: [],
       isMock: false,
-      error: `Network error: ${err.message || err}`,
+      error: `Network error: ${errorMessage}`,
     };
   }
 }
